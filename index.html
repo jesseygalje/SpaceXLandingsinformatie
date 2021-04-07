@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>SpaceX Landingsinformatie</title>
+        <link rel="shortcut icon" type="image/png" href="image/icon.png"> <!--Dit is voor het icoontje in de tab bar-->
+        <script src="https://api.mapbox.com/mapbox-gl-js/v1.9.0/mapbox-gl.js"></script>
+        <script src="index.js" defer></script>
+        <link href="https://api.mapbox.com/mapbox-gl-js/v1.9.0/mapbox-gl.css" rel="stylesheet" />
+        <link rel="stylesheet" type="text/css" href="index.css">
+        <link rel="stylesheet" type="text/css" href="grid.css">
+        <script src="https://api.mapbox.com/mapbox-gl-js/plugins/mapbox-gl-geocoder/v4.7.0/mapbox-gl-geocoder.min.js"></script>
+    </head>
+
+    <body>
+        <div class="flex">
+            <div class="grid-container">
+                <div class="logo">
+                    <img src="image/spacex.png" alt="SpaceX logo" class="spacexlogo">
+                </div>
+                <div class="titel">
+                    <h1>Landingsinformatie</h1>
+                </div>
+
+                <div class="zoeken">
+                    <h2>Waar wil je landen?</h2>
+                    <input type="text" placeholder="Plaatsnaam" id="city">
+                    <input type="submit" value="Krijg informatie" id="getWeather">
+                </div>
+
+                <div class="landingsplek">
+                    <h2 class="plaats"></h2>
+                </div>
+
+                <div id="geocoder" class="geocoder"></div>
+                <div id="map"></div>
+
+                <div class="weer">
+                    <h2>Weer</h2>
+                    <article class="weather">Vul een locatie in om het weer te zien</article>
+                </div>
+
+                <div class="tijd">
+                    <h2>Datum en tijd</h2>
+                    <h2 id="klokdatum"></h2>
+                    <h2 id="kloktijd"></h2>
+                </div>
+            </div>
+        </div>
+    </body>
+</html>

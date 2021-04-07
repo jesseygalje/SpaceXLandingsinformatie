@@ -1,0 +1,31 @@
+body {
+    background-color: black;
+    color: white;
+}
+
+.spacexlogo {
+    width: 10vw;
+}
+
+.weer, .tijd {
+    width: 30vw;
+    margin-left: 2.5vw;
+    background-color: gray;
+    text-align: center;
+    display: inline-block;
+}
+
+#map {
+    overflow: visible;
+    /* position: relative; */
+    display: inline-block;
+    width: 30vw;
+}
+
+.mapboxgl-canvas {
+    position: relative;
+}
+
+article {
+    margin-bottom: 10px;
+}
