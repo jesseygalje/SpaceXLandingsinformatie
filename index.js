@@ -36,26 +36,20 @@ function getAPIdata(locatie1, locatie2) {
 	})
 
 	.then(function(antwoord) {
-		// console.log(antwoord);
 		document.getElementById('zonsopkomst').innerHTML = 'De zon komt op om: ' + antwoord.results.sunrise + ' UTC';
 		document.getElementById('zonsondergang').innerHTML = 'De zon gaat onder om: ' + antwoord.results.sunset + ' UTC';
 	})
 
-	//
+//weer
 	var verzoek = 'https://api.openweathermap.org/data/2.5/weather?appid=ebad1f3488ab22a8a5ecbb867c179d3b&lon=' + locatie1 + '&lat=' + locatie2;
 
-	// get current weather
 	fetch(verzoek)	
 	
-	// parse response to JSON format
 	.then(function(uitkomst) {
 		return uitkomst.json();
 	})
 	
-	// do something with response
 	.then(function(uitkomst) {
-		// show full JSON object
-		// console.log(uitkomst);
 		document.getElementById('weather').innerHTML = Math.floor(uitkomst.main.temp - 273.15) + '&#176;C <br>' + uitkomst.weather[0].description;
 	});
 

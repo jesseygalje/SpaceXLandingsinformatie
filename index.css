@@ -9,11 +9,31 @@ body {
     margin-left: 20vw;
 }
 
+/*tekst*/
 h1 {
     text-align: center;
 }
 
+h2 {
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: bold;
+}
 
+h3 {
+    font-family: 'Courier New', Courier, monospace;
+}
+
+p {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 0.5em;
+}
+
+h3#weather {
+    margin-left: 10px;
+    margin-right: 10px;
+}
+
+/*divboxen*/
 .weer, .tijd {
     width: 90vw;
     margin-left: 5vw;
@@ -24,25 +44,81 @@ h1 {
 
 #map {
     overflow: visible;
-    /* position: relative; */
     display: inline-block;
     width: 90vw;
     height: 50vw;
     margin-left: 5vw;
 }
-
-.mapboxgl-canvas {
-    position: relative;
-}
-
-article {
-    margin-bottom: 10px;
-}
-
+/*zoekbalk*/
 .geocoder {
     text-align: center;
 }
 
+/*map*/
+.mapboxgl-canvas {
+    position: relative;
+}
+
 .mapboxgl-ctrl-geocoder--button {
     display: none;
+}
+
+@media screen and (min-width: 635px) /*tablet*/{
+    .spacexlogo {
+        width: 40vw;
+        margin-left: 30vw;
+    }
+
+    h1 {
+        margin-top: 0;
+    }
+    
+    #map {
+        width: 44vw;
+        margin-left: 5vw;
+    }
+
+    .weer, .tijd {
+        width: 44vw;
+        margin-left: 0;
+        margin-right: 5vw;
+    }
+}
+
+@media screen and (min-width: 1200px) /*kleine desktop*/ {
+    .spacexlogo {
+        width: 30vw;
+        margin-left: 35vw;
+    }
+    
+    #map {
+        width: 88.8vw;
+        height: 30vw;
+        margin-left: 5vw;
+    }
+
+    .weer, .tijd {
+        width: 43vw;
+    }
+
+    .weer {
+        margin-left: 5vw;
+        margin-right: 0;
+    }
+
+    .tijd {
+        margin-right: 5vw;
+    }
+}
+
+@media screen and (min-width: 1600px) {
+    h1 {
+        font-size: 3em;
+    }
+    
+    .mapboxgl-ctrl-geocoder--input {
+        width: 20vw;
+        height: 2vw;
+    }
+    
 }

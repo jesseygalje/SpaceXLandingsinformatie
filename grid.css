@@ -50,3 +50,38 @@ body {
 .tijd {
     grid-area: zon;
 }
+
+@media screen and (min-width: 635px) /*tablet*/ {
+    .grid-container {
+        display: grid;
+        grid-gap: 2vw;
+        grid-template-columns: 1fr;
+    
+        grid-template-areas: 
+        "logo logo"
+        "titel titel"
+        "zoeken zoeken"
+        "locatie locatie"
+        "map weer"
+        "map zon"
+        ;
+    }
+}
+
+@media screen and (min-width: 1200px) /*kleine desktop*/ {
+    .grid-container {
+        display: grid;
+        grid-gap: 2vw;
+        grid-template-columns: 1fr;
+    
+        grid-template-areas: 
+        "logo logo"
+        "titel titel"
+        "zoeken zoeken"
+        "locatie locatie"
+        "map map"
+        "weer zon"
+        ;
+    }
+
+}
