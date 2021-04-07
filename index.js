@@ -42,8 +42,8 @@ function getAPIdata(coordinaat1, coordinaat2) {
 	.then(function(uitkomst) {
 		// show full JSON object
 		// console.log(response);
-		var weatherBox = document.getElementById('weather');
-		weatherBox.innerHTML = uitkomst.main.temp - 273.15;
+		// var weatherBox = document.getElementById('weather');
+		document.getElementById('weather').innerHTML = Math.floor(uitkomst.main.temp - 273.15) + '&#176;C <br>';
 		//weatherBox.innerHTML = response.weather[0].description;
 		//weatherBox.innerHTML = response.main.temp;
 
@@ -54,26 +54,41 @@ function getAPIdata(coordinaat1, coordinaat2) {
 }
 
 // init data stream
-getAPIdata(locatie1, locatie2);
+getAPIdata();
 
 //zonsopkomst zonsondergang api
-function getAPIdata(locatie1, locatie2) {
+// function getAPIdata(locatie1, locatie2) {
 
-	var vraag = 'https://api.ipgeolocation.io/timezone?apiKey=09f72fdd0b864fa19e9f653e337489dc&lat=' + locatie2 + '&long=' + locatie1;
+// 	var vraag = 'https://timezone-by-location.p.rapidapi.com/timezone?lon=' + locatie1 + '&lat=' + locatie2 + '&s=0&c=1';
 
-	fetch(vraag)
+// 	fetch(vraag)
 
-	.then(function(resultaat) {
-		return resultaat.json();
-	})
+// 	.then(function(resultaat) {
+// 		return resultaat.json();
+// 	})
 
-	.then(function(resultaat) {
-		// console.log(resultaat);
-		var tijdzone = document.getElementById('kloktijd');
-		tijdzone.innerHTML = resultaat.dat_time_txt;
-	});
+// 	.then(function(resultaat) {
+// 		// console.log(resultaat);
+// 		var tijdzone = document.getElementById('kloktijd');
+// 		tijdzone.innerHTML = resultaat.date_time_txt;
+// 	});
 
-}
+// 	fetch("https://timezone-by-location.p.rapidapi.com/timezone?lon=" + locatie1 + "&lat=" + locatie2 + "&s=0&c=1", {
+// 		"method": "GET",
+// 		"headers": {
+// 			"x-rapidapi-key": "9cd70da1admsh6d815dd932f1372p1e077bjsnbaeb25c34ea1",
+// 			"x-rapidapi-host": "timezone-by-location.p.rapidapi.com"
+// 		}
+// 	})
+// 	.then(response => {
+// 		console.log(response);
+// 	})
+// 	.catch(err => {
+// 		console.error(err);
+// 	});
+// }
+
+// getAPIdata();
 
 
 // // datum en tijd met timezone
