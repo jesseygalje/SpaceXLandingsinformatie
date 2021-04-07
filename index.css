@@ -1,15 +1,22 @@
 body {
     background-color: black;
     color: white;
+    padding-bottom: 10px;
 }
 
 .spacexlogo {
-    width: 10vw;
+    width: 60vw;
+    margin-left: 20vw;
 }
 
+h1 {
+    text-align: center;
+}
+
+
 .weer, .tijd {
-    width: 30vw;
-    margin-left: 2.5vw;
+    width: 90vw;
+    margin-left: 5vw;
     background-color: gray;
     text-align: center;
     display: inline-block;
@@ -19,7 +26,9 @@ body {
     overflow: visible;
     /* position: relative; */
     display: inline-block;
-    width: 30vw;
+    width: 90vw;
+    height: 50vw;
+    margin-left: 5vw;
 }
 
 .mapboxgl-canvas {
@@ -28,4 +37,12 @@ body {
 
 article {
     margin-bottom: 10px;
+}
+
+.geocoder {
+    text-align: center;
+}
+
+.mapboxgl-ctrl-geocoder--button {
+    display: none;
 }

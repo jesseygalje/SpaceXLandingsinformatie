@@ -1,0 +1,52 @@
+.grid-container {
+    display: grid;
+    grid-gap: 10px;
+    grid-template-columns: 1fr;
+
+    grid-template-areas: 
+    "logo"
+    "titel"
+    "zoeken"
+    "locatie"
+    "map"
+    "weer"
+    "zon"
+    ;
+}
+
+body {
+    margin: 0;
+}
+
+.flex{
+  display: flex;
+  flex-flow: column;
+}
+
+.logo {
+    grid-area: logo;
+}
+
+.titel {
+    grid-area: titel;
+}
+
+.geocoder {
+    grid-area: zoeken;
+}
+
+.locatie {
+    grid-area: landingsplek;
+}
+
+.map {
+    grid-area: map;
+}
+
+.weer {
+    grid-area: weer;
+}
+
+.tijd {
+    grid-area: zon;
+}
