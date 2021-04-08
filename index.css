@@ -42,7 +42,7 @@ h3#weather {
 .weer, .tijd {
     width: 90vw;
     margin-left: 5vw;
-    background-color: gray;
+    background-color: #040B75;
     text-align: center;
     display: inline-block;
 }
@@ -55,6 +55,10 @@ h3#weather {
     margin-left: 5vw;
 }
 /*zoekbalk*/
+.mapboxgl-ctrl-geocoder--icon-search {
+    display: none;
+}
+
 .geocoder {
     text-align: center;
 }
@@ -129,10 +133,9 @@ li {
         margin-left: 41.5vw;
     }
 
-    
     #map {
-        width: 88.8vw;
-        height: 30vw;
+        width: 90vw;
+        height: 20vw;
         margin-left: 5vw;
     }
 
@@ -145,12 +148,9 @@ li {
         margin-right: 0;
     }
 
-    .tijd {
-        margin-right: 5vw;
-    }
 }
 
-@media screen and (min-width: 1600px) {
+@media screen and (min-width: 1600px) /*grote desktop*/ {
     .spacexlogo {
         width: 35vw;
         margin-left: 32.5vw;
