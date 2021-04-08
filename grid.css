@@ -7,7 +7,6 @@
     "logo"
     "titel"
     "zoeken"
-    "locatie"
     "map"
     "weer"
     "zon"
@@ -35,10 +34,6 @@ body {
     grid-area: zoeken;
 }
 
-.locatie {
-    grid-area: landingsplek;
-}
-
 .map {
     grid-area: map;
 }
@@ -61,7 +56,6 @@ body {
         "logo logo"
         "titel titel"
         "zoeken zoeken"
-        "locatie locatie"
         "map weer"
         "map zon"
         ;
@@ -78,7 +72,6 @@ body {
         "logo logo"
         "titel titel"
         "zoeken zoeken"
-        "locatie locatie"
         "map map"
         "weer zon"
         ;

@@ -36,8 +36,8 @@ function getAPIdata(locatie1, locatie2) {
 	})
 
 	.then(function(antwoord) {
-		document.getElementById('zonsopkomst').innerHTML = 'De zon komt op om: ' + antwoord.results.sunrise + ' UTC';
-		document.getElementById('zonsondergang').innerHTML = 'De zon gaat onder om: ' + antwoord.results.sunset + ' UTC';
+		document.getElementById('zonsopkomst').innerHTML = 'De zon komt op om: ' + antwoord.results.sunrise + ' UTC(+0000)';
+		document.getElementById('zonsondergang').innerHTML = 'De zon gaat onder om: ' + antwoord.results.sunset + ' UTC(+0000)';
 	})
 
 //weer
